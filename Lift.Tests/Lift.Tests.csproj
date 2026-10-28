@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Console test runner for the lift LOGIC only (no WinForms, no SQL Server needed).
+       It compiles the same source files the real app uses, so a passing run proves the real code works. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Lift.Tests</RootNamespace>
+    <UseAppHost>false</UseAppHost>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Elevator_System\Models\*.cs" />
+    <Compile Include="..\Elevator_System\Subject\*.cs" />
+    <Compile Include="..\Elevator_System\State\*.cs" />
+    <Compile Include="..\Elevator_System\Controller\*.cs" />
+    <Compile Include="..\Elevator_System\Observer\IElevatorObserver.cs" />
+    <Compile Include="..\Elevator_System\Observer\LogObserver.cs" />
+    <Compile Include="..\Elevator_System\Data\ElevatorLogEntry.cs" />
+    <Compile Include="..\Elevator_System\Data\IElevatorLogRepository.cs" />
+    <Compile Include="..\Elevator_System\Data\BackgroundLogWriter.cs" />
+    <Compile Include="..\Elevator_System\Data\DbBackgroundRunner.cs" />
+  </ItemGroup>
+
+</Project>
